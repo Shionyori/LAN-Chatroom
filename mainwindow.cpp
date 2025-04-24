@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "messagebubble.h"
+#include "OnlineUser.h"
 
 #include <QDialog>
 #include <QFileDialog>
@@ -16,10 +17,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     netWorkInit();
     guiInit();
+
+    //发送上线消息
+    sendSignal(true);
 }
 
 MainWindow::~MainWindow()
 {
+    sendSignal(false);
+
     socket->close();
     delete ui;
 }
@@ -28,7 +34,6 @@ MainWindow::~MainWindow()
 void MainWindow::sendMessage(netData data, QHostAddress addr, int port)
 {
     socket->writeDatagram((char*)&data, sizeof(data), addr, port);
-    addMessageBubble(data.id, data.name, data.buffer);
 }
 
 //添加聊天气泡
@@ -49,30 +54,64 @@ void MainWindow::addMessageBubble(QString ident, QString name, QString msg)
     ui->RecvMessageWidget->scrollToBottom();
 }
 
+//添加上线用户列表
+void MainWindow::addOnlineUser(QString name, QString id, QString addr, QString port)
+{
+    QListWidgetItem *item = new QListWidgetItem(ui->OnlineListWidget);
+    OnlineUser *user = new OnlineUser(ui->OnlineListWidget);
+    item->setSizeHint(user->size());
+    user->setAddr(addr);
+    user->setIdent(id);
+    user->setName(name);
+    user->setPort(port);
+    ui->OnlineListWidget->addItem(item);
+    ui->OnlineListWidget->setItemWidget(item, user);
+}
+
+//删除上线用户列表
+void MainWindow::delOnlineUser(QString name, QString id, QString addr, QString port)
+{
+    int count = ui->OnlineListWidget->count();
+    for(int i = 0; i < count; i++)
+    {
+        QListWidgetItem *item = ui->OnlineListWidget->item(i); //获取条目
+        OnlineUser *user = static_cast<OnlineUser*>(ui->OnlineListWidget->itemWidget(item)); //控件强转为OnlineUser对象
+        if(name == user->getName() &&
+            id == user->getIdent() &&
+            addr == user->getAddr() &&
+            port == user->getPort())
+        {
+            ui->OnlineListWidget->removeItemWidget(item); //移除该条目（item）下的控件（widget）
+            ui->OnlineListWidget->takeItem(i); //移除条目（item）
+            user->deleteLater();
+        }
+    }
+}
+
 //初始化网络连接（绑定+套接字设置+连接信号与槽函数）
 void MainWindow::netWorkInit()
 {
     socket = new QUdpSocket(this);
 
     //绑定到地址
-    quint16 port = 7788;
-    while(port <= 65535)
-    {
-        if(socket->bind(QHostAddress::AnyIPv4,port))break;
-        port++;
-    }
-
-    // if(!socket->bind(QHostAddress::AnyIPv4, 8900))
+    // quint16 port = 8899;
+    // while(port <= 65535)
     // {
-    //     QDialog log;
-    //     log.resize(200,110);
-    //     log.setWindowTitle("错误警告");
-    //     QLabel label(&log);
-    //     label.setGeometry(0, 0, log.width(), log.height());
-    //     label.setText("端口被占用！");
-    //     log.exec();
-    //     return;
+    //     if(socket->bind(QHostAddress::AnyIPv4,port))break;
+    //     port++;
     // }
+
+    if(!socket->bind(QHostAddress::AnyIPv4, 8899)) //[DEBUG2025/4/24]端口号前后设置不一致导致消息无法正常交换
+    {
+        QDialog log;
+        log.resize(200,110);
+        log.setWindowTitle("错误警告");
+        QLabel label(&log);
+        label.setGeometry(0, 0, log.width(), log.height());
+        label.setText("端口被占用！");
+        log.exec();
+        return;
+    }
 
     //打开套接字读写
     socket->open(QIODevice::ReadWrite);
@@ -99,7 +138,25 @@ void MainWindow::guiInit()
     qDebug() << addr;
 }
 
-//接受数据包
+//通知其他用户该用户已上线
+void MainWindow::sendSignal(bool status)
+{
+    netData data;
+    qstrcpy(data.id, ui->UserIdent->text().toStdString().c_str());
+    qstrcpy(data.name, ui->UserName->text().toStdString().c_str());
+    if(status)
+    {
+        qstrcpy(data.buffer, "{[<-ONLINE->]}");
+
+    }
+    else
+    {
+        qstrcpy(data.buffer, "{[<-OFFLINE->]}");
+    }
+    sendMessage(data, QHostAddress::Broadcast, 8899);
+}
+
+//接受数据报
 void MainWindow::recvMessage()
 {
     netData data;
@@ -108,7 +165,18 @@ void MainWindow::recvMessage()
     socket->readDatagram((char*)&data, sizeof(data), &addr, &port); //从UDP socket中读取一个数据报（Datagram），将其内容，以及发送方的地址和端口一并存入data变量中
     qDebug() << "来自:" << addr << "端口:" << port << "消息:" << data.buffer;
 
-    addMessageBubble(data.id, data.name, data.buffer);
+    if(data.buffer == QString("{[<-ONLINE->]}"))
+    {
+        addOnlineUser(data.name,data.id, addr.toString(), QString::number(port));
+    }
+    else if(data.buffer == QString("{[<-OFFLINE->]}"))
+    {
+        delOnlineUser(data.name,data.id, addr.toString(), QString::number(port));
+    }
+    else
+    {
+        addMessageBubble(data.id, data.name, data.buffer);
+    }
 }
 
 //发送按钮
@@ -123,7 +191,7 @@ void MainWindow::on_SendButton_clicked()
     qstrcpy(data.name, ui->UserName->text().toStdString().c_str());
     qstrcpy(data.buffer, msg.toStdString().c_str());
 
-    sendMessage(data, QHostAddress::Broadcast, 8900);
+    sendMessage(data, QHostAddress::Broadcast, 8899);
 
     ui->SendMessageEdit->clear();
 }

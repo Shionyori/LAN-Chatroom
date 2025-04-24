@@ -47,7 +47,7 @@ public:
     QHBoxLayout *SearchArea;
     QLineEdit *SearchEdit;
     QPushButton *SearchButton;
-    QListWidget *FrendList;
+    QListWidget *OnlineListWidget;
     QVBoxLayout *RightArea;
     QLabel *Title;
     QListWidget *RecvMessageWidget;
@@ -168,16 +168,16 @@ public:
 
         LeftArea->addLayout(SearchArea);
 
-        FrendList = new QListWidget(centralwidget);
-        FrendList->setObjectName("FrendList");
-        FrendList->setMinimumSize(QSize(100, 250));
-        FrendList->setMaximumSize(QSize(999999, 500));
-        FrendList->setStyleSheet(QString::fromUtf8("#FriendList{\n"
+        OnlineListWidget = new QListWidget(centralwidget);
+        OnlineListWidget->setObjectName("OnlineListWidget");
+        OnlineListWidget->setMinimumSize(QSize(100, 250));
+        OnlineListWidget->setMaximumSize(QSize(999999, 500));
+        OnlineListWidget->setStyleSheet(QString::fromUtf8("#FriendList{\n"
 "margin:2px;\n"
 "border:none;\n"
 "}"));
 
-        LeftArea->addWidget(FrendList);
+        LeftArea->addWidget(OnlineListWidget);
 
         LeftArea->setStretch(2, 999);
 

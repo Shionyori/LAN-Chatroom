@@ -212,7 +212,7 @@ padding-left:10px;
        </layout>
       </item>
       <item>
-       <widget class="QListWidget" name="FrendList">
+       <widget class="QListWidget" name="OnlineListWidget">
         <property name="minimumSize">
          <size>
           <width>100</width>

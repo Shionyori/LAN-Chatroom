@@ -29,11 +29,15 @@ public:
     //发送自定义数据的接口
     void sendMessage(netData data, QHostAddress addr, int port);
     void addMessageBubble(QString ident, QString name, QString msg);
+    void addOnlineUser(QString name, QString id, QString addr, QString port);
+    void delOnlineUser(QString name, QString id, QString addr, QString port);
 
 protected:
     //初始化网络
     void netWorkInit();
     void guiInit();
+    void sendSignal(bool status);
+
 
 public slots:
     //接受数据

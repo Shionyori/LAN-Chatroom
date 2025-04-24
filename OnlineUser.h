@@ -21,6 +21,11 @@ public:
     void setAddr(QString addr);
     void setPort(QString port);
 
+    QString getName();
+    QString getIdent();
+    QString getAddr();
+    QString getPort();
+
 private:
     Ui::OnlineUser *ui;
 };

@@ -41,7 +41,7 @@ public:
     {
         if (MessageBubble->objectName().isEmpty())
             MessageBubble->setObjectName("MessageBubble");
-        MessageBubble->resize(106, 88);
+        MessageBubble->resize(103, 80);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -50,14 +50,16 @@ public:
         MessageBubble->setMinimumSize(QSize(100, 50));
         MessageBubble->setMaximumSize(QSize(16777215, 16777215));
         horizontalLayout_2 = new QHBoxLayout(MessageBubble);
+        horizontalLayout_2->setSpacing(4);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(4, 4, 4, 6);
         UserLogoArea = new QVBoxLayout();
         UserLogoArea->setObjectName("UserLogoArea");
         UserLogo = new QPushButton(MessageBubble);
         UserLogo->setObjectName("UserLogo");
-        UserLogo->setMinimumSize(QSize(30, 30));
-        UserLogo->setMaximumSize(QSize(30, 30));
-        UserLogo->setIconSize(QSize(30, 30));
+        UserLogo->setMinimumSize(QSize(35, 35));
+        UserLogo->setMaximumSize(QSize(35, 35));
+        UserLogo->setIconSize(QSize(35, 35));
 
         UserLogoArea->addWidget(UserLogo);
 
@@ -69,10 +71,10 @@ public:
         horizontalLayout_2->addLayout(UserLogoArea);
 
         InfoArea = new QVBoxLayout();
-        InfoArea->setSpacing(0);
+        InfoArea->setSpacing(2);
         InfoArea->setObjectName("InfoArea");
         UserInfoArea = new QHBoxLayout();
-        UserInfoArea->setSpacing(0);
+        UserInfoArea->setSpacing(2);
         UserInfoArea->setObjectName("UserInfoArea");
         UserName = new QLabel(MessageBubble);
         UserName->setObjectName("UserName");
@@ -128,7 +130,7 @@ public:
 "line-height:150%;\n"
 "color:#ffffff;\n"
 "}"));
-        Message->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
+        Message->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         MessageArea->addWidget(Message);
 

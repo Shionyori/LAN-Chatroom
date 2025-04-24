@@ -37,3 +37,23 @@ void OnlineUser::setPort(QString port)
 {
     ui->UserPort->setText(port);
 }
+
+QString OnlineUser::getIdent()
+{
+    return ui->UserID->text();
+}
+
+QString OnlineUser::getAddr()
+{
+    return ui->UserAddr->text();
+}
+
+QString OnlineUser::getPort()
+{
+    return ui->UserPort->text();
+}
+
+QString OnlineUser::getName()
+{
+    return ui->UserName->text();
+}
