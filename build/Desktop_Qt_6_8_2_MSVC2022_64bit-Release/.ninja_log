@@ -1,0 +1,9 @@
+# ninja log v6
+4	424	7671009625319711	Chatroom_autogen/timestamp	a7d00e303649631e
+4	424	7671009625319711	Chatroom_autogen/mocs_compilation.cpp	a7d00e303649631e
+4	424	7671009625319711	D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/Chatroom_autogen/timestamp	a7d00e303649631e
+4	424	7671009625319711	D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/Chatroom_autogen/mocs_compilation.cpp	a7d00e303649631e
+434	1718	7671009626636416	CMakeFiles/Chatroom.dir/Chatroom_autogen/mocs_compilation.cpp.obj	8cfd973dcbe5d91a
+440	1728	7671009626696477	CMakeFiles/Chatroom.dir/main.cpp.obj	90008d0a7f17ebcd
+446	2414	7671009626756647	CMakeFiles/Chatroom.dir/mainwindow.cpp.obj	9cdd6a8133f7e9a6
+2415	2548	7671009646456793	Chatroom.exe	cdd34aa794702c6b

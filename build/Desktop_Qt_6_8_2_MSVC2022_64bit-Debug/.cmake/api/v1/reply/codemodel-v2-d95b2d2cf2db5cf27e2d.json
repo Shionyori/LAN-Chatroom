@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-b0f22bca6b889fd7a916.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chatroom",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Chatroom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chatroom-Debug-e2fe3bec3abb4bf70339.json",
+					"name" : "Chatroom",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chatroom_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chatroom_autogen-Debug-e408861e09019f6a5bc0.json",
+					"name" : "Chatroom_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chatroom_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chatroom_autogen_timestamp_deps-Debug-f6c3752d66862bee89ce.json",
+					"name" : "Chatroom_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug",
+		"source" : "D:/Program/C++code/Qt/Chatroom"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

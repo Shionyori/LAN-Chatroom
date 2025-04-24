@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/Chatroom_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Program/C++code/Qt/Chatroom",
+	"CMAKE_SOURCE_DIR" : "D:/Program/C++code/Qt/Chatroom",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/Chatroom_autogen/include",
+	"INPUTS" : [],
+	"LOCK_FILE" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/CMakeFiles/Chatroom_autogen.dir/AutoRcc_SearchIcon_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "SearchIcon" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_SearchIcon.cpp",
+	"RCC_EXECUTABLE" : "D:/Program/Qt/6.8.2/msvc2022_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/CMakeFiles/Chatroom_autogen.dir/AutoRcc_SearchIcon_EWIEGA46WW_Used.txt",
+	"SOURCE" : "D:/Program/C++code/Qt/Chatroom/SearchIcon.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
