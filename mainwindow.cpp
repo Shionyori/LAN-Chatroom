@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "messagebubble.h"
 #include "OnlineUser.h"
+#include "SelfBubble.h"
 
 #include <QDialog>
 #include <QFileDialog>
@@ -54,15 +55,38 @@ void MainWindow::addMessageBubble(QString ident, QString name, QString msg)
     ui->RecvMessageWidget->scrollToBottom();
 }
 
+void MainWindow::addSelfBubble(QString ident, QString name, QString msg)
+{
+    QListWidgetItem *item = new QListWidgetItem(ui->RecvMessageWidget);
+    SelfBubble *bubble = new SelfBubble(ui->RecvMessageWidget);
+
+    bubble->setIdent(ident);
+    bubble->setName(name);
+    bubble->setMessage(msg);
+    bubble->adjustSize(); //调整气泡大小
+    item->setSizeHint(bubble->size()); //根据气泡大小再调整控件大小
+
+    ui->RecvMessageWidget->addItem(item);
+    ui->RecvMessageWidget->setItemWidget(item, bubble);
+
+    ui->RecvMessageWidget->scrollToBottom();
+}
+
 //添加上线用户列表
 void MainWindow::addOnlineUser(QString name, QString id, QString addr, QString port)
-{
+{   
     QListWidgetItem *item = new QListWidgetItem(ui->OnlineListWidget);
+
+    item->setData(NAME, name);
+    item->setData(ID, id);
+    item->setData(ADDR, addr);
+    item->setData(PORT, port);
+
     OnlineUser *user = new OnlineUser(ui->OnlineListWidget);
     item->setSizeHint(user->size());
-    user->setAddr(addr);
-    user->setIdent(id);
     user->setName(name);
+    user->setIdent(id);
+    user->setAddr(addr);
     user->setPort(port);
     ui->OnlineListWidget->addItem(item);
     ui->OnlineListWidget->setItemWidget(item, user);
@@ -94,24 +118,24 @@ void MainWindow::netWorkInit()
     socket = new QUdpSocket(this);
 
     //绑定到地址
-    // quint16 port = 8899;
-    // while(port <= 65535)
-    // {
-    //     if(socket->bind(QHostAddress::AnyIPv4,port))break;
-    //     port++;
-    // }
-
-    if(!socket->bind(QHostAddress::AnyIPv4, 8899)) //[DEBUG2025/4/24]端口号前后设置不一致导致消息无法正常交换
+    quint16 port = 8899;
+    while(port <= 65535)
     {
-        QDialog log;
-        log.resize(200,110);
-        log.setWindowTitle("错误警告");
-        QLabel label(&log);
-        label.setGeometry(0, 0, log.width(), log.height());
-        label.setText("端口被占用！");
-        log.exec();
-        return;
+        if(socket->bind(QHostAddress::AnyIPv4,port))break;
+        port++;
     }
+
+    // if(!socket->bind(QHostAddress::AnyIPv4, 8899)) //[DEBUG2025/4/24]端口号前后设置不一致导致消息无法正常交换
+    // {
+    //     QDialog log;
+    //     log.resize(200,110);
+    //     log.setWindowTitle("错误警告");
+    //     QLabel label(&log);
+    //     label.setGeometry(0, 0, log.width(), log.height());
+    //     label.setText("端口被占用！");
+    //     log.exec();
+    //     return;
+    // }
 
     //打开套接字读写
     socket->open(QIODevice::ReadWrite);
@@ -134,8 +158,11 @@ void MainWindow::guiInit()
     ui->UserIdent->setText(QString::number(ident));
     ui->UserName->setText(MachineName);
 
-    QHostAddress addr = socket->localAddress();
+    QHostAddress addr = socket->localAddress(); //因为使用的是UDP所以套接字并没有特定的绑定对象，addr返回值为0.0.0.0
     qDebug() << addr;
+    int port = socket->localPort();
+    ui->Address->setText(addr.toString());
+    ui->Port->setText(QString::number(port));
 }
 
 //通知其他用户该用户已上线
@@ -147,7 +174,6 @@ void MainWindow::sendSignal(bool status)
     if(status)
     {
         qstrcpy(data.buffer, "{[<-ONLINE->]}");
-
     }
     else
     {
@@ -165,6 +191,9 @@ void MainWindow::recvMessage()
     socket->readDatagram((char*)&data, sizeof(data), &addr, &port); //从UDP socket中读取一个数据报（Datagram），将其内容，以及发送方的地址和端口一并存入data变量中
     qDebug() << "来自:" << addr << "端口:" << port << "消息:" << data.buffer;
 
+
+
+    //判断消息种类
     if(data.buffer == QString("{[<-ONLINE->]}"))
     {
         addOnlineUser(data.name,data.id, addr.toString(), QString::number(port));
@@ -172,6 +201,10 @@ void MainWindow::recvMessage()
     else if(data.buffer == QString("{[<-OFFLINE->]}"))
     {
         delOnlineUser(data.name,data.id, addr.toString(), QString::number(port));
+    }
+    else if(data.id == ui->UserIdent->text() && port == socket->localPort()) //过滤自己发出的消息
+    {
+        addSelfBubble(data.id, data.name, data.buffer);
     }
     else
     {
@@ -203,6 +236,27 @@ void MainWindow::on_UserLogo_clicked()
     if(!path.isEmpty())
     {
         ui->UserLogo->setIcon(QIcon(path));
+    }
+}
+
+//搜索框检测
+void MainWindow::on_SearchEdit_textChanged(const QString &arg1)
+{
+    for(int i = 0; i < ui->OnlineListWidget->count(); i++)
+    {
+        QListWidgetItem *item = ui->OnlineListWidget->item(i);
+        if(item->data(ID).toString() == arg1 ||
+            item->data(NAME).toString() == arg1 ||
+            item->data(ADDR).toString() == arg1 ||
+            item->data(PORT).toString() == arg1 ||
+            arg1 == "")
+        {
+            item->setHidden(false);
+        }
+        else
+        {
+            item->setHidden(true);
+        }
     }
 }
 

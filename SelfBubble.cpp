@@ -1,44 +1,35 @@
-#include "messagebubble.h"
-#include "ui_messagebubble.h"
+#include "SelfBubble.h"
+#include "ui_SelfBubble.h"
 
-MessageBubble::MessageBubble(QWidget *parent)
-    : QWidget(parent), ui(new Ui::MessageBubble)
+SelfBubble::SelfBubble(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::SelfBubble)
 {
     ui->setupUi(this);
 }
 
-MessageBubble::~MessageBubble()
+SelfBubble::~SelfBubble()
 {
     delete ui;
 }
 
-void MessageBubble::setLogo(QIcon icon)
+void SelfBubble::setLogo(QIcon icon)
 {
     ui->UserLogo->setIcon(icon);
 }
 
-void MessageBubble::setIdent(QString id)
+void SelfBubble::setIdent(QString id)
 {
     ui->UserID->setText(id);
 }
 
-void MessageBubble::setName(QString name)
+void SelfBubble::setName(QString name)
 {
     ui->UserName->setText(name);
 }
 
-void MessageBubble::setMessage(QString msg)
+void SelfBubble::setMessage(QString msg)
 {
-    // const int lineLength = 35;
-    // QString formattedMsg;
-    // for (int i = 0; i < msg.length(); i += lineLength) {
-    //     QString line = msg.mid(i, lineLength);
-    //     formattedMsg += line;
-    //     if (i + lineLength < msg.length()) {
-    //         formattedMsg += "\n";
-    //     }
-    // }
-
     const int maxWidth = 350;
     QFontMetrics fm(ui->Message->font());
     QString formattedMsg;

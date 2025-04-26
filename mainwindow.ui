@@ -25,8 +25,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow{
+background-color:rgb(64, 65, 66)
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,4">
+    <property name="spacing">
+     <number>4</number>
+    </property>
     <item>
      <layout class="QVBoxLayout" name="LeftArea" stretch="0,0,999">
       <property name="spacing">
@@ -68,6 +76,22 @@
            <layout class="QHBoxLayout" name="UserInfoArea1">
             <item>
              <widget class="QLabel" name="UserName">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#UserName{
+
+}</string>
+              </property>
               <property name="text">
                <string>用户昵称</string>
               </property>
@@ -75,6 +99,22 @@
             </item>
             <item>
              <widget class="QLabel" name="UserIdent">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#UserIdent{
+
+}</string>
+              </property>
               <property name="text">
                <string>#123456</string>
               </property>
@@ -97,8 +137,27 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="UserInfoArea2">
+            <property name="spacing">
+             <number>6</number>
+            </property>
             <item>
              <widget class="QLabel" name="Address">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#Address{
+
+}</string>
+              </property>
               <property name="text">
                <string>IP地址</string>
               </property>
@@ -106,6 +165,22 @@
             </item>
             <item>
              <widget class="QLabel" name="Port">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#Port{
+
+}</string>
+              </property>
               <property name="text">
                <string>端口号</string>
               </property>
@@ -165,6 +240,8 @@
            <string notr="true">#SearchEdit{
 border:1px solid #c0c0c0;
 padding-left:10px;
+background-color:rgb(255, 255, 255);
+color:rgb(180, 180, 180);
 }</string>
           </property>
           <property name="placeholderText">
@@ -192,8 +269,18 @@ padding-left:10px;
             <height>30</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <bold>false</bold>
+           </font>
+          </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">#SearchButton{
+border:none;
+}
+#SearchButton:hover{
+background-color:#c0c0c0;
+}</string>
           </property>
           <property name="text">
            <string/>
@@ -203,8 +290,8 @@ padding-left:10px;
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>24</width>
+            <height>24</height>
            </size>
           </property>
          </widget>
@@ -226,9 +313,10 @@ padding-left:10px;
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">#FriendList{
-margin:2px;
-border:none;
+         <string notr="true">#OnlineListWidget{
+border:1px solid #c0c0c0;
+border-radius:5px;
+background-color:rgb(255,255,255);
 }</string>
         </property>
        </widget>
@@ -237,6 +325,12 @@ border:none;
     </item>
     <item>
      <layout class="QVBoxLayout" name="RightArea" stretch="0,3,1">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QLabel" name="Title">
         <property name="minimumSize">
@@ -266,8 +360,10 @@ border:none;
         </property>
         <property name="styleSheet">
          <string notr="true">#RecvMessageWidget{
-margin:2px;
-border:none;
+background-color:rgb(255,255,255);
+color:rgb(0, 0, 0);
+border:1px solid #c0c0c0;
+border-radius:5px;
 }</string>
         </property>
        </widget>
@@ -276,32 +372,39 @@ border:none;
        <widget class="QWidget" name="SendMessageWidget" native="true">
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>100</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#SendMessageWidget{
+border:1px solid #c0c0c0;
+border-radius:5px;
+background-color:rgb(255,255,255);
+}</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
           <number>0</number>
          </property>
          <property name="leftMargin">
-          <number>0</number>
+          <number>2</number>
          </property>
          <property name="topMargin">
-          <number>0</number>
+          <number>2</number>
          </property>
          <property name="rightMargin">
-          <number>0</number>
+          <number>2</number>
          </property>
          <property name="bottomMargin">
-          <number>0</number>
+          <number>2</number>
          </property>
          <item>
           <widget class="QPlainTextEdit" name="SendMessageEdit">
            <property name="minimumSize">
             <size>
-             <width>400</width>
-             <height>105</height>
+             <width>380</width>
+             <height>60</height>
             </size>
            </property>
            <property name="font">
@@ -314,6 +417,8 @@ border:none;
             <string notr="true">#SendMessageEdit{
 margin:2px;
 border:none;
+background-color:rgb(255,255,255);
+color:rgb(0, 0, 0)
 }</string>
            </property>
            <property name="plainText">
@@ -338,6 +443,24 @@ border:none;
            </item>
            <item>
             <widget class="QPushButton" name="SendButton">
+             <property name="minimumSize">
+              <size>
+               <width>75</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SendButton{
+margin:1px;
+color:rgb(0, 0, 0);
+background-color:rgb(75, 224, 110);
+border: none;
+border-radius:4px;
+}
+#SendButton:hover{
+background-color:rgb(39, 118, 58);
+}</string>
+             </property>
              <property name="text">
               <string>发送</string>
              </property>

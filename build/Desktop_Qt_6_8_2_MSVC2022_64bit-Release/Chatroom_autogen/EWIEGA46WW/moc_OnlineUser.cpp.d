@@ -1,4 +1,4 @@
-D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/Chatroom_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Program/C++code/Qt/Chatroom/mainwindow.h \
+D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/Chatroom_autogen/EWIEGA46WW/moc_OnlineUser.cpp: D:/Program/C++code/Qt/Chatroom/OnlineUser.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/q20functional.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/q20iterator.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/q20memory.h \
@@ -44,7 +44,6 @@ D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/Cha
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qglobalstatic.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qhash.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qhashfunctions.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qiodevice.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qiodevicebase.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qiterable.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtCore/qiterator.h \
@@ -145,17 +144,8 @@ D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/Cha
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtGui/qtransform.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtGui/qwindowdefs.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtGui/qwindowdefs_win.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/QUdpSocket \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/qabstractsocket.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/qhostaddress.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/qtnetwork-config.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/qtnetworkexports.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/qtnetworkglobal.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtNetwork/qudpsocket.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/QMainWindow \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/qmainwindow.h \
+  D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/QWidget \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/qsizepolicy.h \
-  D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/qtabwidget.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/qtwidgets-config.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   D:/Program/Qt/6.8.2/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \

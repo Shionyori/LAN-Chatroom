@@ -77,19 +77,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 67,
-				"parent" : 0
-			},
-			{
-				"command" : 5,
-				"file" : 1,
-				"line" : 49,
+				"line" : 68,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
 				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
@@ -407,18 +407,19 @@
 				1,
 				2,
 				6,
-				9
+				9,
+				12
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "Chatroom_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "Chatroom_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "Chatroom_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Chatroom::@6890427a1f51a3e7e1df",
@@ -537,7 +538,8 @@
 				1,
 				2,
 				6,
-				9
+				9,
+				12
 			]
 		},
 		{
@@ -548,8 +550,10 @@
 				5,
 				8,
 				11,
-				12,
-				13
+				14,
+				15,
+				16,
+				17
 			]
 		},
 		{
@@ -558,21 +562,22 @@
 			[
 				4,
 				7,
-				10
+				10,
+				13
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				14
+				18
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				15
+				19
 			]
 		}
 	],
@@ -640,6 +645,22 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "SelfBubble.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "SelfBubble.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "SelfBubble.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/Chatroom_autogen/include/ui_mainwindow.h",
@@ -655,6 +676,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/Chatroom_autogen/include/ui_OnlineUser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/Chatroom_autogen/include/ui_SelfBubble.h",
 			"sourceGroupIndex" : 1
 		},
 		{

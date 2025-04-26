@@ -6,16 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>184</width>
-    <height>52</height>
+    <width>192</width>
+    <height>44</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#OnlineUser{
+}
+#OnlineUser:hover{
+}</string>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <property name="spacing">
-    <number>1</number>
+    <number>0</number>
    </property>
    <property name="leftMargin">
     <number>2</number>
@@ -43,8 +49,11 @@
        <height>40</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
-      <string>Logo</string>
+      <string/>
      </property>
      <property name="iconSize">
       <size>
@@ -72,8 +81,13 @@
          <property name="font">
           <font>
            <pointsize>9</pointsize>
-           <bold>true</bold>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#UserName{
+color:rgb(0, 0, 0);
+}</string>
          </property>
          <property name="text">
           <string>用户昵称</string>
@@ -84,9 +98,14 @@
         <widget class="QLabel" name="UserID">
          <property name="minimumSize">
           <size>
-           <width>40</width>
+           <width>60</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#UserID{
+color:rgb(0,0,0);
+}</string>
          </property>
          <property name="text">
           <string>ID</string>
@@ -105,6 +124,11 @@
            <height>0</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">#UserAddr{
+color:rgb(0,0,0);
+}</string>
+         </property>
          <property name="text">
           <string>网络地址</string>
          </property>
@@ -112,6 +136,11 @@
        </item>
        <item>
         <widget class="QLabel" name="UserPort">
+         <property name="styleSheet">
+          <string notr="true">#UserPort{
+color:rgb(0,0,0);
+}</string>
+         </property>
          <property name="text">
           <string>端口</string>
          </property>

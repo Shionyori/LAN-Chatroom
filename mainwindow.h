@@ -15,6 +15,13 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    enum itemData
+    {
+        ID,
+        NAME,
+        ADDR,
+        PORT,
+    };
     struct netData
     {
         netData() : id(""), name(""), buffer("") {}
@@ -29,6 +36,7 @@ public:
     //发送自定义数据的接口
     void sendMessage(netData data, QHostAddress addr, int port);
     void addMessageBubble(QString ident, QString name, QString msg);
+    void addSelfBubble(QString ident, QString name, QString msg);
     void addOnlineUser(QString name, QString id, QString addr, QString port);
     void delOnlineUser(QString name, QString id, QString addr, QString port);
 
@@ -47,6 +55,8 @@ private slots:
     void on_SendButton_clicked();
 
     void on_UserLogo_clicked();
+
+    void on_SearchEdit_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

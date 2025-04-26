@@ -2,6 +2,8 @@ Chatroom_autogen/timestamp: \
 	D:/Program/C++code/Qt/Chatroom/CMakeLists.txt \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.cpp \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.h \
+	D:/Program/C++code/Qt/Chatroom/SelfBubble.cpp \
+	D:/Program/C++code/Qt/Chatroom/SelfBubble.h \
 	D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
@@ -428,6 +430,7 @@ Chatroom_autogen/timestamp: \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.ui \
+	D:/Program/C++code/Qt/Chatroom/SelfBubble.ui \
 	D:/Program/C++code/Qt/Chatroom/mainwindow.ui \
 	D:/Program/C++code/Qt/Chatroom/messagebubble.ui \
 	D:/Program/Qt/Tools/CMake_64/bin/cmake.exe

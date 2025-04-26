@@ -67,9 +67,13 @@ public:
         MainWindow->resize(725, 502);
         MainWindow->setMinimumSize(QSize(725, 502));
         MainWindow->setMaximumSize(QSize(725, 502));
+        MainWindow->setStyleSheet(QString::fromUtf8("#MainWindow{\n"
+"background-color:rgb(64, 65, 66)\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         horizontalLayout_4 = new QHBoxLayout(centralwidget);
+        horizontalLayout_4->setSpacing(4);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         LeftArea = new QVBoxLayout();
         LeftArea->setSpacing(2);
@@ -92,11 +96,23 @@ public:
         UserInfoArea1->setObjectName("UserInfoArea1");
         UserName = new QLabel(centralwidget);
         UserName->setObjectName("UserName");
+        QFont font;
+        font.setBold(true);
+        UserName->setFont(font);
+        UserName->setStyleSheet(QString::fromUtf8("#UserName{\n"
+"\n"
+"}"));
 
         UserInfoArea1->addWidget(UserName);
 
         UserIdent = new QLabel(centralwidget);
         UserIdent->setObjectName("UserIdent");
+        QFont font1;
+        font1.setBold(false);
+        UserIdent->setFont(font1);
+        UserIdent->setStyleSheet(QString::fromUtf8("#UserIdent{\n"
+"\n"
+"}"));
 
         UserInfoArea1->addWidget(UserIdent);
 
@@ -111,11 +127,19 @@ public:
         UserInfoArea2->setObjectName("UserInfoArea2");
         Address = new QLabel(centralwidget);
         Address->setObjectName("Address");
+        Address->setFont(font1);
+        Address->setStyleSheet(QString::fromUtf8("#Address{\n"
+"\n"
+"}"));
 
         UserInfoArea2->addWidget(Address);
 
         Port = new QLabel(centralwidget);
         Port->setObjectName("Port");
+        Port->setFont(font1);
+        Port->setStyleSheet(QString::fromUtf8("#Port{\n"
+"\n"
+"}"));
 
         UserInfoArea2->addWidget(Port);
 
@@ -148,6 +172,8 @@ public:
         SearchEdit->setStyleSheet(QString::fromUtf8("#SearchEdit{\n"
 "border:1px solid #c0c0c0;\n"
 "padding-left:10px;\n"
+"background-color:rgb(255, 255, 255);\n"
+"color:rgb(180, 180, 180);\n"
 "}"));
 
         SearchArea->addWidget(SearchEdit);
@@ -158,10 +184,16 @@ public:
         SearchButton->setSizePolicy(sizePolicy);
         SearchButton->setMinimumSize(QSize(30, 30));
         SearchButton->setMaximumSize(QSize(30, 30));
-        SearchButton->setStyleSheet(QString::fromUtf8(""));
+        SearchButton->setFont(font1);
+        SearchButton->setStyleSheet(QString::fromUtf8("#SearchButton{\n"
+"border:none;\n"
+"}\n"
+"#SearchButton:hover{\n"
+"background-color:#c0c0c0;\n"
+"}"));
         QIcon icon1(QIcon::fromTheme(QIcon::ThemeIcon::EditFind));
         SearchButton->setIcon(icon1);
-        SearchButton->setIconSize(QSize(20, 20));
+        SearchButton->setIconSize(QSize(24, 24));
 
         SearchArea->addWidget(SearchButton);
 
@@ -172,9 +204,10 @@ public:
         OnlineListWidget->setObjectName("OnlineListWidget");
         OnlineListWidget->setMinimumSize(QSize(100, 250));
         OnlineListWidget->setMaximumSize(QSize(999999, 500));
-        OnlineListWidget->setStyleSheet(QString::fromUtf8("#FriendList{\n"
-"margin:2px;\n"
-"border:none;\n"
+        OnlineListWidget->setStyleSheet(QString::fromUtf8("#OnlineListWidget{\n"
+"border:1px solid #c0c0c0;\n"
+"border-radius:5px;\n"
+"background-color:rgb(255,255,255);\n"
 "}"));
 
         LeftArea->addWidget(OnlineListWidget);
@@ -184,14 +217,16 @@ public:
         horizontalLayout_4->addLayout(LeftArea);
 
         RightArea = new QVBoxLayout();
+        RightArea->setSpacing(5);
         RightArea->setObjectName("RightArea");
+        RightArea->setContentsMargins(-1, -1, -1, 0);
         Title = new QLabel(centralwidget);
         Title->setObjectName("Title");
         Title->setMinimumSize(QSize(30, 30));
-        QFont font;
-        font.setPointSize(15);
-        font.setBold(true);
-        Title->setFont(font);
+        QFont font2;
+        font2.setPointSize(15);
+        font2.setBold(true);
+        Title->setFont(font2);
 
         RightArea->addWidget(Title);
 
@@ -199,29 +234,38 @@ public:
         RecvMessageWidget->setObjectName("RecvMessageWidget");
         RecvMessageWidget->setMinimumSize(QSize(400, 220));
         RecvMessageWidget->setStyleSheet(QString::fromUtf8("#RecvMessageWidget{\n"
-"margin:2px;\n"
-"border:none;\n"
+"background-color:rgb(255,255,255);\n"
+"color:rgb(0, 0, 0);\n"
+"border:1px solid #c0c0c0;\n"
+"border-radius:5px;\n"
 "}"));
 
         RightArea->addWidget(RecvMessageWidget);
 
         SendMessageWidget = new QWidget(centralwidget);
         SendMessageWidget->setObjectName("SendMessageWidget");
-        SendMessageWidget->setMinimumSize(QSize(0, 100));
+        SendMessageWidget->setMinimumSize(QSize(400, 100));
+        SendMessageWidget->setStyleSheet(QString::fromUtf8("#SendMessageWidget{\n"
+"border:1px solid #c0c0c0;\n"
+"border-radius:5px;\n"
+"background-color:rgb(255,255,255);\n"
+"}"));
         verticalLayout = new QVBoxLayout(SendMessageWidget);
         verticalLayout->setSpacing(0);
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        verticalLayout->setContentsMargins(2, 2, 2, 2);
         SendMessageEdit = new QPlainTextEdit(SendMessageWidget);
         SendMessageEdit->setObjectName("SendMessageEdit");
-        SendMessageEdit->setMinimumSize(QSize(400, 105));
-        QFont font1;
-        font1.setBold(false);
-        font1.setKerning(true);
-        SendMessageEdit->setFont(font1);
+        SendMessageEdit->setMinimumSize(QSize(380, 60));
+        QFont font3;
+        font3.setBold(false);
+        font3.setKerning(true);
+        SendMessageEdit->setFont(font3);
         SendMessageEdit->setStyleSheet(QString::fromUtf8("#SendMessageEdit{\n"
 "margin:2px;\n"
 "border:none;\n"
+"background-color:rgb(255,255,255);\n"
+"color:rgb(0, 0, 0)\n"
 "}"));
 
         verticalLayout->addWidget(SendMessageEdit);
@@ -234,6 +278,17 @@ public:
 
         SendButton = new QPushButton(SendMessageWidget);
         SendButton->setObjectName("SendButton");
+        SendButton->setMinimumSize(QSize(75, 25));
+        SendButton->setStyleSheet(QString::fromUtf8("#SendButton{\n"
+"margin:1px;\n"
+"color:rgb(0, 0, 0);\n"
+"background-color:rgb(75, 224, 110);\n"
+"border: none;\n"
+"border-radius:4px;\n"
+"}\n"
+"#SendButton:hover{\n"
+"background-color:rgb(39, 118, 58);\n"
+"}"));
 
         ButtonArea->addWidget(SendButton);
 

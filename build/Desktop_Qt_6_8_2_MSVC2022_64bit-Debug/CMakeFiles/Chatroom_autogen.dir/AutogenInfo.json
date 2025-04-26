@@ -392,6 +392,12 @@
 			null
 		],
 		[
+			"D:/Program/C++code/Qt/Chatroom/SelfBubble.h",
+			"MU",
+			"EWIEGA46WW/moc_SelfBubble.cpp",
+			null
+		],
+		[
 			"D:/Program/C++code/Qt/Chatroom/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -462,6 +468,7 @@
 	"SOURCES" : 
 	[
 		[ "D:/Program/C++code/Qt/Chatroom/OnlineUser.cpp", "MU", null ],
+		[ "D:/Program/C++code/Qt/Chatroom/SelfBubble.cpp", "MU", null ],
 		[ "D:/Program/C++code/Qt/Chatroom/main.cpp", "MU", null ],
 		[ "D:/Program/C++code/Qt/Chatroom/mainwindow.cpp", "MU", null ],
 		[ "D:/Program/C++code/Qt/Chatroom/messagebubble.cpp", "MU", null ]
