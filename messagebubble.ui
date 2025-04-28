@@ -64,17 +64,26 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">#UserLogo:hover{
+        <string notr="true">#UserLogo{
+background-color:rgb(255, 255, 255);
+border:none;
+border-radius: 5px;
+}
+#UserLogo:hover{
 background-color:#c0c0c0;
 }</string>
        </property>
        <property name="text">
         <string/>
        </property>
+       <property name="icon">
+        <iconset resource="IconImages.qrc">
+         <normaloff>:/icons/resource/user.png</normaloff>:/icons/resource/user.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>35</width>
-         <height>35</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -120,7 +129,7 @@ background-color:#c0c0c0;
          </property>
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>10</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -206,7 +215,7 @@ color:rgb(0, 0, 0)
          <property name="font">
           <font>
            <family>微软雅黑</family>
-           <pointsize>8</pointsize>
+           <pointsize>12</pointsize>
            <italic>false</italic>
            <bold>false</bold>
            <kerning>true</kerning>
@@ -268,6 +277,8 @@ color:rgb(0, 0, 0);
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="IconImages.qrc"/>
+ </resources>
  <connections/>
 </ui>

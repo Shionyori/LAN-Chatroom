@@ -1,0 +1,4 @@
+D:/Program/C++code/Qt/Chatroom/build/CMakeFiles/Chatroom.dir
+D:/Program/C++code/Qt/Chatroom/build/CMakeFiles/INSTALL.dir
+D:/Program/C++code/Qt/Chatroom/build/CMakeFiles/ALL_BUILD.dir
+D:/Program/C++code/Qt/Chatroom/build/CMakeFiles/ZERO_CHECK.dir

@@ -39,7 +39,7 @@ void MessageBubble::setMessage(QString msg)
     //     }
     // }
 
-    const int maxWidth = 350;
+    const int maxWidth = 400;
     QFontMetrics fm(ui->Message->font());
     QString formattedMsg;
     QString line;

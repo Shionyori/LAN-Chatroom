@@ -26,6 +26,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         messagebubble.h messagebubble.cpp messagebubble.ui
         OnlineUser.h OnlineUser.cpp OnlineUser.ui
         SelfBubble.h SelfBubble.cpp SelfBubble.ui
+        IconImages.qrc
+
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -84,7 +84,11 @@ public:
         UserLogo->setObjectName("UserLogo");
         UserLogo->setMinimumSize(QSize(40, 40));
         UserLogo->setMaximumSize(QSize(40, 40));
-        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::CameraPhoto));
+        UserLogo->setStyleSheet(QString::fromUtf8("#UserLogo{\n"
+"background-color:rgb(255, 255, 255);\n"
+"}"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/resource/user.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         UserLogo->setIcon(icon);
         UserLogo->setIconSize(QSize(35, 35));
 

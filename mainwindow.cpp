@@ -260,3 +260,9 @@ void MainWindow::on_SearchEdit_textChanged(const QString &arg1)
     }
 }
 
+//表情按钮
+void MainWindow::on_EmojiButton_clicked()
+{
+
+}
+

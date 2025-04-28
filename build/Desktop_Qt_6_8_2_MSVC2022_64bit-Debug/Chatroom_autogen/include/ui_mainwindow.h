@@ -53,6 +53,10 @@ public:
     QListWidget *RecvMessageWidget;
     QWidget *SendMessageWidget;
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *UpButtonArea;
+    QPushButton *EmojiButton;
+    QPushButton *FontButton;
+    QSpacerItem *UpButtonSpacer;
     QPlainTextEdit *SendMessageEdit;
     QHBoxLayout *ButtonArea;
     QSpacerItem *ButtonSpacer;
@@ -64,9 +68,9 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(725, 502);
-        MainWindow->setMinimumSize(QSize(725, 502));
-        MainWindow->setMaximumSize(QSize(725, 502));
+        MainWindow->resize(1000, 725);
+        MainWindow->setMinimumSize(QSize(1000, 725));
+        MainWindow->setMaximumSize(QSize(999999, 999999));
         MainWindow->setStyleSheet(QString::fromUtf8("#MainWindow{\n"
 "background-color:rgb(64, 65, 66)\n"
 "}"));
@@ -84,7 +88,11 @@ public:
         UserLogo->setObjectName("UserLogo");
         UserLogo->setMinimumSize(QSize(40, 40));
         UserLogo->setMaximumSize(QSize(40, 40));
-        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::CameraPhoto));
+        UserLogo->setStyleSheet(QString::fromUtf8("#UserLogo{\n"
+"background-color:rgb(255, 255, 255);\n"
+"}"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/resource/user.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         UserLogo->setIcon(icon);
         UserLogo->setIconSize(QSize(35, 35));
 
@@ -96,6 +104,7 @@ public:
         UserInfoArea1->setObjectName("UserInfoArea1");
         UserName = new QLabel(centralwidget);
         UserName->setObjectName("UserName");
+        UserName->setMinimumSize(QSize(0, 0));
         QFont font;
         font.setBold(true);
         UserName->setFont(font);
@@ -107,6 +116,7 @@ public:
 
         UserIdent = new QLabel(centralwidget);
         UserIdent->setObjectName("UserIdent");
+        UserIdent->setMinimumSize(QSize(0, 0));
         QFont font1;
         font1.setBold(false);
         UserIdent->setFont(font1);
@@ -124,9 +134,11 @@ public:
         UserInfoArea->addLayout(UserInfoArea1);
 
         UserInfoArea2 = new QHBoxLayout();
+        UserInfoArea2->setSpacing(6);
         UserInfoArea2->setObjectName("UserInfoArea2");
         Address = new QLabel(centralwidget);
         Address->setObjectName("Address");
+        Address->setMinimumSize(QSize(0, 0));
         Address->setFont(font1);
         Address->setStyleSheet(QString::fromUtf8("#Address{\n"
 "\n"
@@ -136,6 +148,7 @@ public:
 
         Port = new QLabel(centralwidget);
         Port->setObjectName("Port");
+        Port->setMinimumSize(QSize(0, 0));
         Port->setFont(font1);
         Port->setStyleSheet(QString::fromUtf8("#Port{\n"
 "\n"
@@ -203,7 +216,7 @@ public:
         OnlineListWidget = new QListWidget(centralwidget);
         OnlineListWidget->setObjectName("OnlineListWidget");
         OnlineListWidget->setMinimumSize(QSize(100, 250));
-        OnlineListWidget->setMaximumSize(QSize(999999, 500));
+        OnlineListWidget->setMaximumSize(QSize(999999, 999999));
         OnlineListWidget->setStyleSheet(QString::fromUtf8("#OnlineListWidget{\n"
 "border:1px solid #c0c0c0;\n"
 "border-radius:5px;\n"
@@ -212,7 +225,6 @@ public:
 
         LeftArea->addWidget(OnlineListWidget);
 
-        LeftArea->setStretch(2, 999);
 
         horizontalLayout_4->addLayout(LeftArea);
 
@@ -254,10 +266,62 @@ public:
         verticalLayout->setSpacing(0);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(2, 2, 2, 2);
+        UpButtonArea = new QHBoxLayout();
+        UpButtonArea->setSpacing(10);
+        UpButtonArea->setObjectName("UpButtonArea");
+        UpButtonArea->setContentsMargins(8, 4, -1, -1);
+        EmojiButton = new QPushButton(SendMessageWidget);
+        EmojiButton->setObjectName("EmojiButton");
+        EmojiButton->setMinimumSize(QSize(25, 25));
+        EmojiButton->setMaximumSize(QSize(25, 25));
+        EmojiButton->setStyleSheet(QString::fromUtf8("#EmojiButton{\n"
+"background-color:rgb(255, 255, 255);\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"}\n"
+"#EmojiButton:hover{\n"
+"background-color:#c0c0c0;\n"
+"}\n"
+""));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/icons/resource/smile.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        EmojiButton->setIcon(icon2);
+        EmojiButton->setIconSize(QSize(25, 25));
+
+        UpButtonArea->addWidget(EmojiButton);
+
+        FontButton = new QPushButton(SendMessageWidget);
+        FontButton->setObjectName("FontButton");
+        FontButton->setMinimumSize(QSize(25, 25));
+        FontButton->setMaximumSize(QSize(25, 25));
+        FontButton->setStyleSheet(QString::fromUtf8("#FontButton{\n"
+"background-color:rgb(255, 255, 255);\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"}\n"
+"#FontButton:hover{\n"
+"background-color:#c0c0c0;\n"
+"}"));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/icons/resource/letter.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        FontButton->setIcon(icon3);
+        FontButton->setIconSize(QSize(27, 27));
+
+        UpButtonArea->addWidget(FontButton);
+
+        UpButtonSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        UpButtonArea->addItem(UpButtonSpacer);
+
+
+        verticalLayout->addLayout(UpButtonArea);
+
         SendMessageEdit = new QPlainTextEdit(SendMessageWidget);
         SendMessageEdit->setObjectName("SendMessageEdit");
         SendMessageEdit->setMinimumSize(QSize(380, 60));
         QFont font3;
+        font3.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font3.setPointSize(12);
         font3.setBold(false);
         font3.setKerning(true);
         SendMessageEdit->setFont(font3);
@@ -272,13 +336,17 @@ public:
 
         ButtonArea = new QHBoxLayout();
         ButtonArea->setObjectName("ButtonArea");
+        ButtonArea->setContentsMargins(-1, -1, 4, 4);
         ButtonSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         ButtonArea->addItem(ButtonSpacer);
 
         SendButton = new QPushButton(SendMessageWidget);
         SendButton->setObjectName("SendButton");
-        SendButton->setMinimumSize(QSize(75, 25));
+        SendButton->setMinimumSize(QSize(90, 30));
+        QFont font4;
+        font4.setPointSize(10);
+        SendButton->setFont(font4);
         SendButton->setStyleSheet(QString::fromUtf8("#SendButton{\n"
 "margin:1px;\n"
 "color:rgb(0, 0, 0);\n"
@@ -298,17 +366,17 @@ public:
 
         RightArea->addWidget(SendMessageWidget);
 
-        RightArea->setStretch(1, 3);
-        RightArea->setStretch(2, 1);
+        RightArea->setStretch(1, 5);
+        RightArea->setStretch(2, 2);
 
         horizontalLayout_4->addLayout(RightArea);
 
-        horizontalLayout_4->setStretch(0, 1);
-        horizontalLayout_4->setStretch(1, 4);
+        horizontalLayout_4->setStretch(0, 2);
+        horizontalLayout_4->setStretch(1, 5);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 725, 18));
+        menubar->setGeometry(QRect(0, 0, 1000, 18));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -330,6 +398,8 @@ public:
         SearchEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "\347\224\250\346\210\267\346\230\265\347\247\260/\347\224\250\346\210\267ID", nullptr));
         SearchButton->setText(QString());
         Title->setText(QCoreApplication::translate("MainWindow", "\345\261\200\345\237\237\347\275\221\350\201\212\345\244\251\345\256\244", nullptr));
+        EmojiButton->setText(QString());
+        FontButton->setText(QString());
         SendMessageEdit->setPlainText(QString());
         SendButton->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201", nullptr));
     } // retranslateUi

@@ -377,7 +377,8 @@
 		"D:/Program/Qt/6.8.2/msvc2022_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"D:/Program/Qt/6.8.2/msvc2022_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"D:/Program/Qt/6.8.2/msvc2022_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
-		"D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake"
+		"D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
+		"D:/Program/C++code/Qt/Chatroom/IconImages.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/Program/C++code/Qt/Chatroom",
 	"CROSS_CONFIG" : false,

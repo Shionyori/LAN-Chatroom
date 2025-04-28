@@ -1,5 +1,6 @@
 Chatroom_autogen/timestamp: \
 	D:/Program/C++code/Qt/Chatroom/CMakeLists.txt \
+	D:/Program/C++code/Qt/Chatroom/IconImages.qrc \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.cpp \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.h \
 	D:/Program/C++code/Qt/Chatroom/SelfBubble.cpp \

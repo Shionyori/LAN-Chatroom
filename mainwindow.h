@@ -44,6 +44,7 @@ protected:
     //初始化网络
     void netWorkInit();
     void guiInit();
+    void emojiInit();
     void sendSignal(bool status);
 
 
@@ -57,6 +58,8 @@ private slots:
     void on_UserLogo_clicked();
 
     void on_SearchEdit_textChanged(const QString &arg1);
+
+    void on_EmojiButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>725</width>
-    <height>502</height>
+    <width>1000</width>
+    <height>725</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>725</width>
-    <height>502</height>
+    <width>1000</width>
+    <height>725</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>725</width>
-    <height>502</height>
+    <width>999999</width>
+    <height>999999</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -31,12 +31,12 @@ background-color:rgb(64, 65, 66)
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,4">
+   <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,5">
     <property name="spacing">
      <number>4</number>
     </property>
     <item>
-     <layout class="QVBoxLayout" name="LeftArea" stretch="0,0,999">
+     <layout class="QVBoxLayout" name="LeftArea" stretch="0,0,0">
       <property name="spacing">
        <number>2</number>
       </property>
@@ -56,11 +56,17 @@ background-color:rgb(64, 65, 66)
             <height>40</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">#UserLogo{
+background-color:rgb(255, 255, 255);
+}</string>
+          </property>
           <property name="text">
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="QIcon::ThemeIcon::CameraPhoto"/>
+           <iconset resource="IconImages.qrc">
+            <normaloff>:/icons/resource/user.png</normaloff>:/icons/resource/user.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -309,7 +315,7 @@ background-color:#c0c0c0;
         <property name="maximumSize">
          <size>
           <width>999999</width>
-          <height>500</height>
+          <height>999999</height>
          </size>
         </property>
         <property name="styleSheet">
@@ -324,7 +330,7 @@ background-color:rgb(255,255,255);
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="RightArea" stretch="0,3,1">
+     <layout class="QVBoxLayout" name="RightArea" stretch="0,5,2">
       <property name="spacing">
        <number>5</number>
       </property>
@@ -400,6 +406,111 @@ background-color:rgb(255,255,255);
           <number>2</number>
          </property>
          <item>
+          <layout class="QHBoxLayout" name="UpButtonArea">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>8</number>
+           </property>
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="EmojiButton">
+             <property name="minimumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#EmojiButton{
+background-color:rgb(255, 255, 255);
+border:none;
+border-radius:5px;
+}
+#EmojiButton:hover{
+background-color:#c0c0c0;
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="IconImages.qrc">
+               <normaloff>:/icons/resource/smile.png</normaloff>:/icons/resource/smile.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="FontButton">
+             <property name="minimumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#FontButton{
+background-color:rgb(255, 255, 255);
+border:none;
+border-radius:5px;
+}
+#FontButton:hover{
+background-color:#c0c0c0;
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="IconImages.qrc">
+               <normaloff>:/icons/resource/letter.png</normaloff>:/icons/resource/letter.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>27</width>
+               <height>27</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="UpButtonSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
           <widget class="QPlainTextEdit" name="SendMessageEdit">
            <property name="minimumSize">
             <size>
@@ -409,6 +520,8 @@ background-color:rgb(255,255,255);
            </property>
            <property name="font">
             <font>
+             <family>微软雅黑</family>
+             <pointsize>12</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -428,6 +541,12 @@ color:rgb(0, 0, 0)
          </item>
          <item>
           <layout class="QHBoxLayout" name="ButtonArea">
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>4</number>
+           </property>
            <item>
             <spacer name="ButtonSpacer">
              <property name="orientation">
@@ -445,9 +564,14 @@ color:rgb(0, 0, 0)
             <widget class="QPushButton" name="SendButton">
              <property name="minimumSize">
               <size>
-               <width>75</width>
-               <height>25</height>
+               <width>90</width>
+               <height>30</height>
               </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
              </property>
              <property name="styleSheet">
               <string notr="true">#SendButton{
@@ -480,13 +604,15 @@ background-color:rgb(39, 118, 58);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>725</width>
+     <width>1000</width>
      <height>18</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="IconImages.qrc"/>
+ </resources>
  <connections/>
 </ui>

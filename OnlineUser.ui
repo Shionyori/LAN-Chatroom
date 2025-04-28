@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>192</width>
+    <width>196</width>
     <height>44</height>
    </rect>
   </property>
@@ -14,14 +14,11 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#OnlineUser{
-}
-#OnlineUser:hover{
-}</string>
+   <string notr="true"/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <property name="spacing">
-    <number>0</number>
+    <number>4</number>
    </property>
    <property name="leftMargin">
     <number>2</number>
@@ -45,20 +42,31 @@
      </property>
      <property name="maximumSize">
       <size>
-       <width>40</width>
-       <height>40</height>
+       <width>35</width>
+       <height>35</height>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">#UserLogo{
+background-color:rgb(255, 255, 255);
+border:none;
+border-radius: 5px;
+}
+#UserLogo:hover{
+background-color:#c0c0c0;
+}</string>
      </property>
      <property name="text">
       <string/>
      </property>
+     <property name="icon">
+      <iconset resource="IconImages.qrc">
+       <normaloff>:/icons/resource/user.png</normaloff>:/icons/resource/user.png</iconset>
+     </property>
      <property name="iconSize">
       <size>
-       <width>40</width>
-       <height>40</height>
+       <width>30</width>
+       <height>30</height>
       </size>
      </property>
     </widget>
@@ -152,6 +160,8 @@ color:rgb(0,0,0);
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="IconImages.qrc"/>
+ </resources>
  <connections/>
 </ui>

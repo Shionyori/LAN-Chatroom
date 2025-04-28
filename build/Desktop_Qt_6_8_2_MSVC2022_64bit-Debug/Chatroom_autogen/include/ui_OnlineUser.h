@@ -10,6 +10,7 @@
 #define UI_ONLINEUSER_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -36,21 +37,28 @@ public:
     {
         if (OnlineUser->objectName().isEmpty())
             OnlineUser->setObjectName("OnlineUser");
-        OnlineUser->resize(192, 44);
-        OnlineUser->setStyleSheet(QString::fromUtf8("#OnlineUser{\n"
-"}\n"
-"#OnlineUser:hover{\n"
-"}"));
+        OnlineUser->resize(196, 44);
+        OnlineUser->setStyleSheet(QString::fromUtf8(""));
         horizontalLayout_3 = new QHBoxLayout(OnlineUser);
-        horizontalLayout_3->setSpacing(0);
+        horizontalLayout_3->setSpacing(4);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setContentsMargins(2, 2, 2, 2);
         UserLogo = new QPushButton(OnlineUser);
         UserLogo->setObjectName("UserLogo");
         UserLogo->setMinimumSize(QSize(40, 40));
-        UserLogo->setMaximumSize(QSize(40, 40));
-        UserLogo->setStyleSheet(QString::fromUtf8(""));
-        UserLogo->setIconSize(QSize(40, 40));
+        UserLogo->setMaximumSize(QSize(35, 35));
+        UserLogo->setStyleSheet(QString::fromUtf8("#UserLogo{\n"
+"background-color:rgb(255, 255, 255);\n"
+"border:none;\n"
+"border-radius: 5px;\n"
+"}\n"
+"#UserLogo:hover{\n"
+"background-color:#c0c0c0;\n"
+"}"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/resource/user.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        UserLogo->setIcon(icon);
+        UserLogo->setIconSize(QSize(30, 30));
 
         horizontalLayout_3->addWidget(UserLogo);
 

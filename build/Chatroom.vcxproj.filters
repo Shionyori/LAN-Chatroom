@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\messagebubble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\OnlineUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\SelfBubble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_Debug\qrc_IconImages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_Release\qrc_IconImages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_MinSizeRel\qrc_IconImages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_RelWithDebInfo\qrc_IconImages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\messagebubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\OnlineUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_messagebubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_OnlineUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_messagebubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_OnlineUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_messagebubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_OnlineUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_messagebubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_OnlineUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Program\C++code\Qt\Chatroom\build\CMakeFiles\318f0060b7f79180706fe0302a957bd1\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Program\C++code\Qt\Chatroom\build\CMakeFiles\c50ca86375a57e85d6a806dd6ccaf03b\qrc_IconImages.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Program\C++code\Qt\Chatroom\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Program\C++code\Qt\Chatroom\mainwindow.ui" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\messagebubble.ui" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\OnlineUser.ui" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\SelfBubble.ui" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\IconImages.qrc" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Debug.stamp" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Release.stamp" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{86BA3D2E-FD9C-3E81-82E9-52EBFC02A457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{43523188-E84C-32FA-817C-14B3970FEF55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A95C51BE-20DF-3971-B22A-86F30939686B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
