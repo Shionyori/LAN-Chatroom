@@ -27,6 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         OnlineUser.h OnlineUser.cpp OnlineUser.ui
         SelfBubble.h SelfBubble.cpp SelfBubble.ui
         IconImages.qrc
+        EmojiList.h EmojiList.cpp EmojiList.ui
 
 
     )

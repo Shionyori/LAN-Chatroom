@@ -1,5 +1,7 @@
 Chatroom_autogen/timestamp: \
 	D:/Program/C++code/Qt/Chatroom/CMakeLists.txt \
+	D:/Program/C++code/Qt/Chatroom/EmojiList.cpp \
+	D:/Program/C++code/Qt/Chatroom/EmojiList.h \
 	D:/Program/C++code/Qt/Chatroom/IconImages.qrc \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.cpp \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.h \
@@ -430,6 +432,7 @@ Chatroom_autogen/timestamp: \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-MSVC.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
+	D:/Program/C++code/Qt/Chatroom/EmojiList.ui \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.ui \
 	D:/Program/C++code/Qt/Chatroom/SelfBubble.ui \
 	D:/Program/C++code/Qt/Chatroom/mainwindow.ui \

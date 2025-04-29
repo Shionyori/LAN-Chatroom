@@ -14,18 +14,9 @@
 			}
 		]
 	},
-	"dependencies" : 
-	[
-		{
-			"id" : "Chatroom::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		}
-	],
-	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"id" : "Chatroom_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
-	"name" : "ALL_BUILD",
+	"name" : "Chatroom_autogen_timestamp_deps",
 	"paths" : 
 	{
 		"build" : ".",

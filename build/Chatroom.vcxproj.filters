@@ -19,6 +19,9 @@
     <ClCompile Include="D:\Program\C++code\Qt\Chatroom\SelfBubble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\EmojiList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_Debug\qrc_IconImages.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,6 +57,9 @@
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\SelfBubble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\EmojiList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -64,6 +70,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_EmojiList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_mainwindow.h">
@@ -78,6 +87,9 @@
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_SelfBubble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_EmojiList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,6 +102,9 @@
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_SelfBubble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_EmojiList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -100,6 +115,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_SelfBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_EmojiList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -118,6 +136,7 @@
     <None Include="D:\Program\C++code\Qt\Chatroom\OnlineUser.ui" />
     <None Include="D:\Program\C++code\Qt\Chatroom\SelfBubble.ui" />
     <None Include="D:\Program\C++code\Qt\Chatroom\IconImages.qrc" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\EmojiList.ui" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Debug.stamp" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Release.stamp" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_MinSizeRel.stamp" />

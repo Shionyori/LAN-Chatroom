@@ -1,5 +1,7 @@
 Chatroom_autogen/timestamp: \
 	D:/Program/C++code/Qt/Chatroom/CMakeLists.txt \
+	D:/Program/C++code/Qt/Chatroom/EmojiList.cpp \
+	D:/Program/C++code/Qt/Chatroom/EmojiList.h \
 	D:/Program/C++code/Qt/Chatroom/IconImages.qrc \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.cpp \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.h \
@@ -400,99 +402,37 @@ Chatroom_autogen/timestamp: \
 	D:/Program/Qt/6.8.2/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
 	D:/Program/Qt/6.8.2/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	D:/Program/Qt/6.8.2/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessAliasTargets.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-CXX-CXXImportStd.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-CXX.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindVulkan.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake \
-	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-MSVC-CXX.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-MSVC.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
 	D:/Program/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
+	D:/Program/C++code/Qt/Chatroom/EmojiList.ui \
 	D:/Program/C++code/Qt/Chatroom/OnlineUser.ui \
 	D:/Program/C++code/Qt/Chatroom/SelfBubble.ui \
 	D:/Program/C++code/Qt/Chatroom/mainwindow.ui \

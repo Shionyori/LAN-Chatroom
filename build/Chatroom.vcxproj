@@ -374,7 +374,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\C++code\Qt\Chatroom\EmojiList.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Debug.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
@@ -390,7 +390,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\C++code\Qt\Chatroom\EmojiList.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Release.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
@@ -406,7 +406,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\C++code\Qt\Chatroom\EmojiList.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_MinSizeRel.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
@@ -422,7 +422,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Program\C++code\Qt\Chatroom\mainwindow.ui;D:\Program\C++code\Qt\Chatroom\messagebubble.ui;D:\Program\C++code\Qt\Chatroom\OnlineUser.ui;D:\Program\C++code\Qt\Chatroom\SelfBubble.ui;D:\Program\C++code\Qt\Chatroom\EmojiList.ui;D:\Program\Qt\6.8.2\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_RelWithDebInfo.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -586,10 +586,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </None>
     <None Include="D:\Program\C++code\Qt\Chatroom\IconImages.qrc">
     </None>
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\EmojiList.h" />
+    <ClCompile Include="D:\Program\C++code\Qt\Chatroom\EmojiList.cpp" />
+    <None Include="D:\Program\C++code\Qt\Chatroom\EmojiList.ui">
+    </None>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_mainwindow.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_messagebubble.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_OnlineUser.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_SelfBubble.h" />
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Debug\ui_EmojiList.h" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Debug.stamp">
     </None>
     <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_Debug\qrc_IconImages.cpp">
@@ -607,6 +612,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_messagebubble.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_OnlineUser.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_SelfBubble.h" />
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_Release\ui_EmojiList.h" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_Release.stamp">
     </None>
     <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_Release\qrc_IconImages.cpp">
@@ -624,6 +630,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_messagebubble.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_OnlineUser.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_SelfBubble.h" />
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_MinSizeRel\ui_EmojiList.h" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_MinSizeRel.stamp">
     </None>
     <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_MinSizeRel\qrc_IconImages.cpp">
@@ -641,6 +648,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_messagebubble.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_OnlineUser.h" />
     <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_SelfBubble.h" />
+    <ClInclude Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\include_RelWithDebInfo\ui_EmojiList.h" />
     <None Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\autouic_RelWithDebInfo.stamp">
     </None>
     <ClCompile Include="D:\Program\C++code\Qt\Chatroom\build\Chatroom_autogen\EWIEGA46WW_RelWithDebInfo\qrc_IconImages.cpp">

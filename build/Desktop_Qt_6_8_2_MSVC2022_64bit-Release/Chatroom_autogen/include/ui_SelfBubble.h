@@ -10,6 +10,7 @@
 #define UI_SELFBUBBLE_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -41,7 +42,7 @@ public:
     {
         if (SelfBubble->objectName().isEmpty())
             SelfBubble->setObjectName("SelfBubble");
-        SelfBubble->resize(115, 92);
+        SelfBubble->resize(127, 108);
         horizontalLayout = new QHBoxLayout(SelfBubble);
         horizontalLayout->setObjectName("horizontalLayout");
         InfoArea = new QVBoxLayout();
@@ -59,7 +60,7 @@ public:
         UserName->setMinimumSize(QSize(20, 20));
         UserName->setMaximumSize(QSize(16777215, 20));
         QFont font;
-        font.setPointSize(9);
+        font.setPointSize(10);
         font.setBold(true);
         UserName->setFont(font);
         UserName->setStyleSheet(QString::fromUtf8("#UserName{\n"
@@ -102,7 +103,7 @@ public:
         Message->setMaximumSize(QSize(16777215, 16777215));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font2.setPointSize(8);
+        font2.setPointSize(12);
         font2.setBold(false);
         font2.setKerning(true);
         Message->setFont(font2);
@@ -135,8 +136,18 @@ public:
         UserLogo->setObjectName("UserLogo");
         UserLogo->setMinimumSize(QSize(35, 35));
         UserLogo->setMaximumSize(QSize(35, 35));
-        UserLogo->setStyleSheet(QString::fromUtf8(""));
-        UserLogo->setIconSize(QSize(35, 35));
+        UserLogo->setStyleSheet(QString::fromUtf8("#UserLogo{\n"
+"background-color:rgb(255, 255, 255);\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"}\n"
+"#UserLogo:hover{\n"
+"background-color:#c0c0c0;\n"
+"}"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/resource/user.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        UserLogo->setIcon(icon);
+        UserLogo->setIconSize(QSize(30, 30));
 
         UserLogoArea->addWidget(UserLogo);
 

@@ -102,7 +102,6 @@ public:
         Message->setMinimumSize(QSize(20, 20));
         Message->setMaximumSize(QSize(16777215, 16777215));
         QFont font2;
-        font2.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
         font2.setPointSize(12);
         font2.setBold(false);
         font2.setKerning(true);

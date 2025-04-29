@@ -520,7 +520,6 @@ background-color:#c0c0c0;
            </property>
            <property name="font">
             <font>
-             <family>微软雅黑</family>
              <pointsize>12</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>

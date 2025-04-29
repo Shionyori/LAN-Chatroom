@@ -387,6 +387,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Program/C++code/Qt/Chatroom/EmojiList.h",
+			"MU",
+			"EWIEGA46WW/moc_EmojiList.cpp",
+			null
+		],
+		[
 			"D:/Program/C++code/Qt/Chatroom/OnlineUser.h",
 			"MU",
 			"EWIEGA46WW/moc_OnlineUser.cpp",
@@ -469,6 +475,7 @@
 	"SETTINGS_FILE" : "D:/Program/C++code/Qt/Chatroom/build/Desktop_Qt_6_8_2_MSVC2022_64bit-Release/CMakeFiles/Chatroom_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/Program/C++code/Qt/Chatroom/EmojiList.cpp", "MU", null ],
 		[ "D:/Program/C++code/Qt/Chatroom/OnlineUser.cpp", "MU", null ],
 		[ "D:/Program/C++code/Qt/Chatroom/SelfBubble.cpp", "MU", null ],
 		[ "D:/Program/C++code/Qt/Chatroom/main.cpp", "MU", null ],

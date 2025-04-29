@@ -3,6 +3,7 @@
 #include "messagebubble.h"
 #include "OnlineUser.h"
 #include "SelfBubble.h"
+#include "EmojiList.h"
 
 #include <QDialog>
 #include <QFileDialog>
@@ -263,6 +264,16 @@ void MainWindow::on_SearchEdit_textChanged(const QString &arg1)
 //表情按钮
 void MainWindow::on_EmojiButton_clicked()
 {
+    QPoint point = ui->SendMessageWidget->pos();
+    EmojiList *emojiList = new EmojiList(this);
+    point.setY(point.y() - emojiList->height());
+    emojiList->move(point);
+    emojiList->show();
 
+    connect(emojiList, &EmojiList::emojiClicked, this, [=](QString emoji){
+        ui->SendMessageEdit->insertPlainText(emoji);
+        emojiList->deleteLater();
+    });
 }
+
 

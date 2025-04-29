@@ -44,7 +44,6 @@ protected:
     //初始化网络
     void netWorkInit();
     void guiInit();
-    void emojiInit();
     void sendSignal(bool status);
 
 

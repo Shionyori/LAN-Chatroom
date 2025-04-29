@@ -37,7 +37,7 @@ public:
     {
         if (OnlineUser->objectName().isEmpty())
             OnlineUser->setObjectName("OnlineUser");
-        OnlineUser->resize(192, 44);
+        OnlineUser->resize(196, 44);
         OnlineUser->setStyleSheet(QString::fromUtf8(""));
         horizontalLayout_3 = new QHBoxLayout(OnlineUser);
         horizontalLayout_3->setSpacing(4);
@@ -45,12 +45,12 @@ public:
         horizontalLayout_3->setContentsMargins(2, 2, 2, 2);
         UserLogo = new QPushButton(OnlineUser);
         UserLogo->setObjectName("UserLogo");
-        UserLogo->setMinimumSize(QSize(35, 35));
+        UserLogo->setMinimumSize(QSize(40, 40));
         UserLogo->setMaximumSize(QSize(35, 35));
         UserLogo->setStyleSheet(QString::fromUtf8("#UserLogo{\n"
 "background-color:rgb(255, 255, 255);\n"
-"border: 2px solid rgb(0, 0, 0);\n"
-"border-radius:5px;\n"
+"border:none;\n"
+"border-radius: 5px;\n"
 "}\n"
 "#UserLogo:hover{\n"
 "background-color:#c0c0c0;\n"
