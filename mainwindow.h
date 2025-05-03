@@ -45,7 +45,7 @@ protected:
     void netWorkInit();
     void guiInit();
     void sendSignal(bool status);
-
+    bool isOnOnlineList(netData data, QHostAddress addr, quint16 port);
 
 public slots:
     //接受数据

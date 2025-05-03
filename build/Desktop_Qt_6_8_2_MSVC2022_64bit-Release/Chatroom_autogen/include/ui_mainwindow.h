@@ -320,7 +320,6 @@ public:
         SendMessageEdit->setObjectName("SendMessageEdit");
         SendMessageEdit->setMinimumSize(QSize(380, 60));
         QFont font3;
-        font3.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
         font3.setPointSize(12);
         font3.setBold(false);
         font3.setKerning(true);

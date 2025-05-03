@@ -183,6 +183,23 @@ void MainWindow::sendSignal(bool status)
     sendMessage(data, QHostAddress::Broadcast, 8899);
 }
 
+bool MainWindow::isOnOnlineList(netData data, QHostAddress addr, quint16 port)
+{
+    if(ui->OnlineListWidget->count() == 0) return false;
+    for(int i = 0; i < ui->OnlineListWidget->count(); i++)
+    {
+        QListWidgetItem *item = ui->OnlineListWidget->item(i);
+        //判断是否在列表中
+        if(/*item->data(ID).toString() == data.id &&*/ //[DEBUG2025/5/3] *暂未解决* 由于不明原因导致ID的数据是端口号
+            item->data(NAME).toString() == data.name &&
+            item->data(PORT).toInt() == port)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 //接受数据报
 void MainWindow::recvMessage()
 {
@@ -192,20 +209,27 @@ void MainWindow::recvMessage()
     socket->readDatagram((char*)&data, sizeof(data), &addr, &port); //从UDP socket中读取一个数据报（Datagram），将其内容，以及发送方的地址和端口一并存入data变量中
     qDebug() << "来自:" << addr << "端口:" << port << "消息:" << data.buffer;
 
-
+    //过滤自己的消息
+    if(data.id == ui->UserIdent->text() && port == socket->localPort()) return;
 
     //判断消息种类
     if(data.buffer == QString("{[<-ONLINE->]}"))
     {
-        addOnlineUser(data.name,data.id, addr.toString(), QString::number(port));
+        //判断是否在列表中
+        qDebug() << isOnOnlineList(data, addr, port);
+        if(!isOnOnlineList(data, addr, port))
+        {
+            netData sigdata;
+            qstrcpy(sigdata.id, ui->UserIdent->text().toStdString().c_str());
+            qstrcpy(sigdata.name, ui->UserName->text().toStdString().c_str());
+            qstrcpy(sigdata.buffer, "{[<-ONLINE->]}");
+            sendMessage(sigdata, addr, port);
+            addOnlineUser(data.name, data.id, addr.toString(), QString::number(port));
+        }
     }
     else if(data.buffer == QString("{[<-OFFLINE->]}"))
     {
         delOnlineUser(data.name,data.id, addr.toString(), QString::number(port));
-    }
-    else if(data.id == ui->UserIdent->text() && port == socket->localPort()) //过滤自己发出的消息
-    {
-        addSelfBubble(data.id, data.name, data.buffer);
     }
     else
     {
@@ -217,7 +241,6 @@ void MainWindow::recvMessage()
 void MainWindow::on_SendButton_clicked()
 {
     QString msg = ui->SendMessageEdit->toPlainText();
-    qDebug() << msg;
 
     //把要发送的文本内容打包为一个data实例
     netData data;
@@ -226,6 +249,7 @@ void MainWindow::on_SendButton_clicked()
     qstrcpy(data.buffer, msg.toStdString().c_str());
 
     sendMessage(data, QHostAddress::Broadcast, 8899);
+    addSelfBubble(data.id, data.name, data.buffer);
 
     ui->SendMessageEdit->clear();
 }
