@@ -63,5 +63,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QUdpSocket *socket;
+    bool IsUserChat;
+    QString current_user_addr;
+    quint16 current_user_port;
 };
 #endif // MAINWINDOW_H

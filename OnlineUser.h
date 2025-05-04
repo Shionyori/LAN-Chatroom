@@ -26,6 +26,12 @@ public:
     QString getAddr();
     QString getPort();
 
+protected:
+    void mousePressEvent(QMouseEvent*); //在线用户条目的鼠标点击事件
+
+signals:
+    void clicked(QString addr, quint16 port);
+
 private:
     Ui::OnlineUser *ui;
 };

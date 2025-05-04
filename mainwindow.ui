@@ -357,21 +357,78 @@ background-color:rgb(255,255,255);
        </widget>
       </item>
       <item>
-       <widget class="QListWidget" name="RecvMessageWidget">
-        <property name="minimumSize">
-         <size>
-          <width>400</width>
-          <height>220</height>
-         </size>
+       <widget class="QStackedWidget" name="RecvMessageArea">
+        <property name="currentIndex">
+         <number>0</number>
         </property>
-        <property name="styleSheet">
-         <string notr="true">#RecvMessageWidget{
+        <widget class="QWidget" name="Broadcast">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QListWidget" name="RecvMessageWidget">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>220</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#RecvMessageWidget{
 background-color:rgb(255,255,255);
 color:rgb(0, 0, 0);
 border:1px solid #c0c0c0;
 border-radius:5px;
 }</string>
-        </property>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="User">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QListWidget" name="UserMessageWidget">
+            <property name="styleSheet">
+             <string notr="true">#UserMessageWidget{
+background-color:rgb(255,255,255);
+color:rgb(0, 0, 0);
+border:1px solid #c0c0c0;
+border-radius:5px;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </item>
       <item>

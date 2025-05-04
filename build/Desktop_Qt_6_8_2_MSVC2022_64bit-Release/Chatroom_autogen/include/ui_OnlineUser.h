@@ -38,15 +38,27 @@ public:
         if (OnlineUser->objectName().isEmpty())
             OnlineUser->setObjectName("OnlineUser");
         OnlineUser->resize(196, 44);
-        OnlineUser->setStyleSheet(QString::fromUtf8(""));
+        OnlineUser->setStyleSheet(QString::fromUtf8("#OnlineUser{\n"
+"background-color:rgb(255, 255, 255);\n"
+"border: none;\n"
+"border-radius: 5px;\n"
+"}\n"
+"#OnlineUser:hover{\n"
+"background-color:#c0c0c0;\n"
+"}"));
         horizontalLayout_3 = new QHBoxLayout(OnlineUser);
         horizontalLayout_3->setSpacing(4);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setContentsMargins(2, 2, 2, 2);
         UserLogo = new QPushButton(OnlineUser);
         UserLogo->setObjectName("UserLogo");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(UserLogo->sizePolicy().hasHeightForWidth());
+        UserLogo->setSizePolicy(sizePolicy);
         UserLogo->setMinimumSize(QSize(40, 40));
-        UserLogo->setMaximumSize(QSize(35, 35));
+        UserLogo->setMaximumSize(QSize(40, 40));
         UserLogo->setStyleSheet(QString::fromUtf8("#UserLogo{\n"
 "background-color:rgb(255, 255, 255);\n"
 "border:none;\n"

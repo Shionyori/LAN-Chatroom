@@ -53,6 +53,12 @@ QString OnlineUser::getPort()
     return ui->UserPort->text();
 }
 
+void OnlineUser::mousePressEvent(QMouseEvent *)
+{
+    qDebug() << "user clicked";
+    emit clicked(ui->UserAddr->text(), ui->UserPort->text().toInt());
+}
+
 QString OnlineUser::getName()
 {
     return ui->UserName->text();

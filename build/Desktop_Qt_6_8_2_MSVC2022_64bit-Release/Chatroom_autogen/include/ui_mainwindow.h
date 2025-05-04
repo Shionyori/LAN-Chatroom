@@ -21,6 +21,7 @@
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -50,7 +51,13 @@ public:
     QListWidget *OnlineListWidget;
     QVBoxLayout *RightArea;
     QLabel *Title;
+    QStackedWidget *RecvMessageArea;
+    QWidget *Broadcast;
+    QHBoxLayout *horizontalLayout;
     QListWidget *RecvMessageWidget;
+    QWidget *User;
+    QHBoxLayout *horizontalLayout_2;
+    QListWidget *UserMessageWidget;
     QWidget *SendMessageWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *UpButtonArea;
@@ -242,7 +249,15 @@ public:
 
         RightArea->addWidget(Title);
 
-        RecvMessageWidget = new QListWidget(centralwidget);
+        RecvMessageArea = new QStackedWidget(centralwidget);
+        RecvMessageArea->setObjectName("RecvMessageArea");
+        Broadcast = new QWidget();
+        Broadcast->setObjectName("Broadcast");
+        horizontalLayout = new QHBoxLayout(Broadcast);
+        horizontalLayout->setSpacing(0);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        RecvMessageWidget = new QListWidget(Broadcast);
         RecvMessageWidget->setObjectName("RecvMessageWidget");
         RecvMessageWidget->setMinimumSize(QSize(400, 220));
         RecvMessageWidget->setStyleSheet(QString::fromUtf8("#RecvMessageWidget{\n"
@@ -252,7 +267,29 @@ public:
 "border-radius:5px;\n"
 "}"));
 
-        RightArea->addWidget(RecvMessageWidget);
+        horizontalLayout->addWidget(RecvMessageWidget);
+
+        RecvMessageArea->addWidget(Broadcast);
+        User = new QWidget();
+        User->setObjectName("User");
+        horizontalLayout_2 = new QHBoxLayout(User);
+        horizontalLayout_2->setSpacing(0);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        UserMessageWidget = new QListWidget(User);
+        UserMessageWidget->setObjectName("UserMessageWidget");
+        UserMessageWidget->setStyleSheet(QString::fromUtf8("#UserMessageWidget{\n"
+"background-color:rgb(255,255,255);\n"
+"color:rgb(0, 0, 0);\n"
+"border:1px solid #c0c0c0;\n"
+"border-radius:5px;\n"
+"}"));
+
+        horizontalLayout_2->addWidget(UserMessageWidget);
+
+        RecvMessageArea->addWidget(User);
+
+        RightArea->addWidget(RecvMessageArea);
 
         SendMessageWidget = new QWidget(centralwidget);
         SendMessageWidget->setObjectName("SendMessageWidget");
@@ -382,6 +419,9 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
+
+        RecvMessageArea->setCurrentIndex(0);
+
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

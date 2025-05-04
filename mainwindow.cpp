@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , socket(new QUdpSocket(this)) //[Debug2025/4/19]忘记在构造函数中对socket初始化而导致运行错误
+    , IsUserChat(false)
 {
     ui->setupUi(this);
 
@@ -41,8 +42,8 @@ void MainWindow::sendMessage(netData data, QHostAddress addr, int port)
 //添加聊天气泡
 void MainWindow::addMessageBubble(QString ident, QString name, QString msg)
 {
-    QListWidgetItem *item = new QListWidgetItem(ui->RecvMessageWidget);
-    MessageBubble *bubble = new MessageBubble(ui->RecvMessageWidget);
+    QListWidgetItem *item = new QListWidgetItem(IsUserChat? ui->UserMessageWidget : ui->RecvMessageWidget);
+    MessageBubble *bubble = new MessageBubble(IsUserChat? ui->UserMessageWidget : ui->RecvMessageWidget);
 
     bubble->setIdent(ident);
     bubble->setName(name);
@@ -50,16 +51,26 @@ void MainWindow::addMessageBubble(QString ident, QString name, QString msg)
     bubble->adjustSize(); //调整气泡大小
     item->setSizeHint(bubble->size()); //根据气泡大小再调整控件大小
 
-    ui->RecvMessageWidget->addItem(item);
-    ui->RecvMessageWidget->setItemWidget(item, bubble);
+    if(IsUserChat)
+    {
+        ui->UserMessageWidget->addItem(item);
+        ui->UserMessageWidget->setItemWidget(item, bubble);
+        ui->UserMessageWidget->scrollToBottom();
+    }
+    else
+    {
+        ui->RecvMessageWidget->addItem(item);
+        ui->RecvMessageWidget->setItemWidget(item, bubble);
+        ui->UserMessageWidget->scrollToBottom();
+    }
 
-    ui->RecvMessageWidget->scrollToBottom();
 }
 
+//添加自己的聊天气泡
 void MainWindow::addSelfBubble(QString ident, QString name, QString msg)
 {
-    QListWidgetItem *item = new QListWidgetItem(ui->RecvMessageWidget);
-    SelfBubble *bubble = new SelfBubble(ui->RecvMessageWidget);
+    QListWidgetItem *item = new QListWidgetItem(IsUserChat? ui->UserMessageWidget : ui->RecvMessageWidget);
+    SelfBubble *bubble = new SelfBubble(IsUserChat? ui->UserMessageWidget : ui->RecvMessageWidget);
 
     bubble->setIdent(ident);
     bubble->setName(name);
@@ -67,13 +78,23 @@ void MainWindow::addSelfBubble(QString ident, QString name, QString msg)
     bubble->adjustSize(); //调整气泡大小
     item->setSizeHint(bubble->size()); //根据气泡大小再调整控件大小
 
-    ui->RecvMessageWidget->addItem(item);
-    ui->RecvMessageWidget->setItemWidget(item, bubble);
+    if(IsUserChat)
+    {
+        ui->UserMessageWidget->addItem(item);
+        ui->UserMessageWidget->setItemWidget(item, bubble);
+        ui->UserMessageWidget->scrollToBottom();
+    }
+    else
+    {
+        ui->RecvMessageWidget->addItem(item);
+        ui->RecvMessageWidget->setItemWidget(item, bubble);
+        ui->RecvMessageWidget->scrollToBottom();
+    }
 
-    ui->RecvMessageWidget->scrollToBottom();
+
 }
 
-//添加上线用户列表
+//添加上线用户列表(并连接用户点击事件的信号与槽)
 void MainWindow::addOnlineUser(QString name, QString id, QString addr, QString port)
 {   
     QListWidgetItem *item = new QListWidgetItem(ui->OnlineListWidget);
@@ -84,12 +105,37 @@ void MainWindow::addOnlineUser(QString name, QString id, QString addr, QString p
     item->setData(PORT, port);
 
     OnlineUser *user = new OnlineUser(ui->OnlineListWidget);
+
+    //设置子控件（item）的样式表才能改变条目样式
+    ui->OnlineListWidget->setStyleSheet("#OnlineListWidget{"
+                                        "border: 1px solid #c0c0c0;"
+                                        "border-radius:5px;"
+                                        "background-color:rgb(255,255,255);"
+                                        "}"
+                                        "QListWidget::item {"
+                                        "background-color: rgb(255, 255, 255);"
+                                        "border: none;"
+                                        "margin: 0;"
+                                        "padding: 0;"
+                                        "}"
+                                        "QListWidget::item:hover {"
+                                        "background-color: #c0c0c0;"
+                                        "}");
+
+    bool is_connect = connect(user, &OnlineUser::clicked, this, [=](QString addr, quint16 port){
+        ui->RecvMessageArea->setCurrentIndex(1); //切换到用户聊天窗口（*暂未完善，后续需要添加多个用户窗口才行*）
+        IsUserChat = true;
+        current_user_addr = addr;
+        current_user_port = port;
+    });
+    qDebug() << "connect:" << is_connect;
+
     item->setSizeHint(user->size());
     user->setName(name);
     user->setIdent(id);
     user->setAddr(addr);
     user->setPort(port);
-    ui->OnlineListWidget->addItem(item);
+    ui->OnlineListWidget->insertItem(ui->OnlineListWidget->count(), item);
     ui->OnlineListWidget->setItemWidget(item, user);
 }
 
@@ -183,6 +229,7 @@ void MainWindow::sendSignal(bool status)
     sendMessage(data, QHostAddress::Broadcast, 8899);
 }
 
+//判断是否在用户列表中
 bool MainWindow::isOnOnlineList(netData data, QHostAddress addr, quint16 port)
 {
     if(ui->OnlineListWidget->count() == 0) return false;
@@ -216,7 +263,7 @@ void MainWindow::recvMessage()
     if(data.buffer == QString("{[<-ONLINE->]}"))
     {
         //判断是否在列表中
-        qDebug() << isOnOnlineList(data, addr, port);
+        qDebug() << "in the list:" << isOnOnlineList(data, addr, port);
         if(!isOnOnlineList(data, addr, port))
         {
             netData sigdata;
@@ -240,16 +287,23 @@ void MainWindow::recvMessage()
 //发送按钮
 void MainWindow::on_SendButton_clicked()
 {
-    QString msg = ui->SendMessageEdit->toPlainText();
-
     //把要发送的文本内容打包为一个data实例
     netData data;
     qstrcpy(data.id, ui->UserIdent->text().toStdString().c_str());
     qstrcpy(data.name, ui->UserName->text().toStdString().c_str());
-    qstrcpy(data.buffer, msg.toStdString().c_str());
+    qstrcpy(data.buffer, ui->SendMessageEdit->toPlainText().toStdString().c_str());
 
-    sendMessage(data, QHostAddress::Broadcast, 8899);
-    addSelfBubble(data.id, data.name, data.buffer);
+    //判断是用户聊天还是广播聊天
+    if(IsUserChat)
+    {
+        sendMessage(data, QHostAddress(current_user_addr), current_user_port);
+        addSelfBubble(data.id, data.name, data.buffer);
+    }
+    else
+    {
+        sendMessage(data, QHostAddress::Broadcast, 8899);
+        addSelfBubble(data.id, data.name, data.buffer);
+    }
 
     ui->SendMessageEdit->clear();
 }

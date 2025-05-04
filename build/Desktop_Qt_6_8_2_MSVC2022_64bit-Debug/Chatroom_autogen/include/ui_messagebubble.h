@@ -42,7 +42,7 @@ public:
     {
         if (MessageBubble->objectName().isEmpty())
             MessageBubble->setObjectName("MessageBubble");
-        MessageBubble->resize(111, 89);
+        MessageBubble->resize(111, 106);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
